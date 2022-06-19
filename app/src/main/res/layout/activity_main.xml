@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".MainActivity">
+
+
+    <View
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/ic_baseline_arrow_drop_down_24"
+        android:clickable="true"
+        android:focusable="true"
+        android:onClick="PopupMenu" />
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <TextView
+            android:id="@+id/textNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:text="SOS Will Be Sent To\n"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/start"
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            android:layout_below="@id/textNum"
+            android:layout_marginTop="35dp"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="#11115E"
+            android:onClick="startServiceV"
+            android:text="Start"
+            android:textColor="@color/white"
+            app:cornerRadius="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/stop"
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            android:layout_below="@id/start"
+            android:backgroundTint="#FF0000"
+            android:onClick="stopService"
+            android:text="stop"
+            android:enabled="false"
+            android:textColor="@color/white"
+            app:cornerRadius="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/start" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/textBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="77dp"
+        android:layout_marginTop="174dp"
+        android:layout_marginEnd="76dp"
+        android:layout_marginBottom="22dp"
+        android:text="© Pateros Technological College | All Rights reserved 2022"
+        android:textAlignment="center"
+        android:textSize="10sp" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/shake"
+        android:layout_width="332dp"
+        android:layout_height="83dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="41dp"
+        android:layout_marginTop="174dp"
+        android:layout_marginEnd="37dp"
+        android:layout_marginBottom="99dp"
+        android:background="#00000000"
+        android:enabled="false"
+        android:fontFamily="@font/bangers"
+        android:text=""
+        android:textAlignment="center"
+        android:textColor="#A0A0A0"
+        android:textSize="15sp" />
+
+</RelativeLayout>
